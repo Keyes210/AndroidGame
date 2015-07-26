@@ -20,6 +20,7 @@ import java.io.InputStream;
 /**
  * Created by Alex on 7/23/2015.
  */
+
 public class AndroidGraphics implements Graphics {
     AssetManager assets;
     Bitmap frameBuffer;
@@ -100,22 +101,6 @@ public class AndroidGraphics implements Graphics {
     }
 
     @Override
-    public void drawImage(android.media.Image image, int x, int y, int srcX, int srcY, int srcWidth, int srcHeight) {
-
-    }
-
-
-    public void drawImage(Image Image, int x, int y) {
-        canvas.drawBitmap(((AndroidImage)Image).bitmap, x, y, null);
-    }
-
-
-    @Override
-    public void drawImage(android.media.Image Image, int x, int y) {
-
-    }
-
-    @Override
     public void drawARGB(int a, int r, int g, int b) {
         paint.setStyle(Style.FILL);
         canvas.drawARGB(a, r, g, b);
@@ -146,6 +131,10 @@ public class AndroidGraphics implements Graphics {
                 null);
     }
 
+
+    public void drawImage(Image Image, int x, int y) {
+        canvas.drawBitmap(((AndroidImage)Image).bitmap, x, y, null);
+    }
 
     public void drawScaledImage(Image Image, int x, int y, int width, int height, int srcX, int srcY, int srcWidth, int srcHeight){
 

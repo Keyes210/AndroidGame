@@ -1,7 +1,7 @@
 package com.alexlowe.androidgame.framework;
 
 import android.graphics.Paint;
-import android.media.Image;
+import com.alexlowe.androidgame.framework.Image;
 
 /**
  * Created by Alex on 7/23/2015.
